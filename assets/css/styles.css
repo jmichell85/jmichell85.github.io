@@ -477,6 +477,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 @media (max-width: 600px) {
   .g-2, .g-3, .g-4, .form-grid { grid-template-columns: minmax(0, 1fr); }
   .follow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .product { padding: 0.5rem 0.5rem 0.9rem; }
+  .product .cover { margin-bottom: 0.7rem; }
+  .product .tag { font-size: 0.62rem; margin-bottom: 0.5rem; }
+  .product h3 { font-size: 0.88rem; }
+  .product .price { font-size: 0.85rem; flex-wrap: wrap; gap: 0.3rem 0.6rem; }
   .follow { padding: 1rem; }
   .follow .amount { font-size: 1.9rem; }
   .follow .follow-text { font-size: 1rem; }
