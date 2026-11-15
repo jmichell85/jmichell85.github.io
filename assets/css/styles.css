@@ -382,9 +382,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .hero-logo::before { content: ""; position: absolute; inset: -12%; border-radius: 50%; background: radial-gradient(closest-side, rgba(8, 9, 13, 0.92) 45%, transparent); z-index: -1; }
 .hero-logo img { width: 100%; position: relative; }
 /* Animated logo: slow float, breathing spectrum glow, and a light sweep confined to the logo's own shape */
-.about-logo { width: min(100%, 360px); margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.about-logo { width: min(100%, 360px); }
 .about-logo img { width: 100%; position: relative; }
-@media (max-width: 900px) { .about-logo { width: 170px; margin-top: 1rem; } }
+@media (max-width: 900px) { .about-logo { width: 170px; } }
 .logo-anim { position: relative; animation: logo-float 9s ease-in-out infinite; will-change: transform; }
 .logo-anim::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url(/assets/img/logo-mark-sm.png) center / contain no-repeat; filter: blur(34px) saturate(140%); opacity: 0.35; animation: logo-breathe 6s ease-in-out infinite; }
 .logo-sheen { position: absolute; inset: 0; overflow: hidden; pointer-events: none; -webkit-mask: url(/assets/img/logo-mark.png) center / contain no-repeat; mask: url(/assets/img/logo-mark.png) center / contain no-repeat; }
