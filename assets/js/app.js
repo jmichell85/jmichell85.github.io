@@ -208,7 +208,7 @@
         const res = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
-        say('ok', 'Thank you. Your message was sent.');
+        say('ok', form.dataset.ok || 'Thank you. Your message was sent.');
       } catch (err) {
         say('error', 'Something went wrong and your message was not sent. Please try again.');
       } finally { btn.disabled = false; }

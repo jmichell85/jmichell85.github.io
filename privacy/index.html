@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&display=block">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=d68c848f">
+<link rel="stylesheet" href="/assets/css/styles.css?v=6aa20ee0">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Gays Against Groomers","url":"https://www.gaysagainstgroomers.com","foundingDate":"2022","logo":"https://www.gaysagainstgroomers.com/assets/img/logo-mark.png","sameAs":["https://x.com/againstgrmrs","https://www.instagram.com/gaysagainstgroomers","https://www.facebook.com/gaysagainstgroomers","https://www.youtube.com/gaysagainstgroomers","https://t.me/gaysagainstgroomers","https://gaysagainstgroomers.substack.com/"]}</script>
-<script src="/assets/js/app.js?v=772fe61e" defer></script>
+<script src="/assets/js/app.js?v=a9a8e875" defer></script>
 
 </head>
 <body>
@@ -69,7 +69,7 @@
 <ul><li><strong>Contact form.</strong> Your name, email address, the topic you choose and your message.</li><li><strong>Speaking invitation form.</strong> Your name, email address, phone number if you provide it, your organization, and the details of your event, including your speaking fee budget and whether travel is covered.</li></ul>
 <p>We use this information only to read and respond to your message or invitation. Form submissions are delivered to us by Formspree, a form-processing service, under the <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
 <h2>Newsletter</h2>
-<p>Our newsletter is published on Substack. When you enter your email address in the newsletter signup box, it goes directly to Substack, which manages your subscription under the <a href="https://substack.com/privacy" target="_blank" rel="noopener">Substack Privacy Policy</a>. You can unsubscribe at any time using the link in any newsletter email.</p>
+<p>When you sign up for our newsletter, we collect your email address and use it only to send you our newsletter. Signups are delivered to us by Formspree, and our newsletter is sent through an email service provider that holds our mailing list on our behalf. You can unsubscribe at any time using the link in any newsletter email, or by writing to us through our <a href="/contact/">contact page</a>.</p>
 <h2>Contributions</h2>
 <p>Contributions are processed by Stripe. When you contribute, you enter your payment details on Stripe's checkout page, not on our website. We never see or store your full card number. Stripe shares with us your name, email address, the amount and date of your contribution, and, for monthly contributions, the status of your subscription. We use this to keep records and to help you with questions about your contribution. Stripe's handling of your information is described in the <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a>.</p>
 <h2>Information collected automatically</h2>
@@ -77,7 +77,7 @@
 <p>We store one small note in your browser to remember that you have already seen our support message, so that it is not shown to you again for a week. It contains only a date and is not sent to us.</p>
 <p>Like every website, the service that hosts ours receives basic technical information when you visit, such as your IP address, browser type and the pages requested. This is used to deliver the site and keep it secure.</p>
 <p>Parts of our pages load from other services, which receive your IP address when they do:</p>
-<ul><li><strong>Google Fonts</strong> supplies the typefaces.</li><li><strong>Substack</strong> supplies the images on our Latest Articles page and the newsletter signup box shown on our pages.</li><li><strong>Shopify</strong> supplies the product images from our store.</li></ul>
+<ul><li><strong>Google Fonts</strong> supplies the typefaces.</li><li><strong>Substack</strong> supplies the images on our Latest Articles page.</li><li><strong>Shopify</strong> supplies the product images from our store.</li></ul>
 <p>If we add visitor analytics in the future, we will update this policy first.</p>
 <h2>Links to other services</h2>
 <p>Our site links to services we do not control, including our store, our bookstore, Substack, YouTube, X, Instagram, Facebook and Telegram. When you follow a link, subscribe or make a purchase there, that service's own privacy policy applies.</p>
@@ -103,10 +103,18 @@
       <p class="eyebrow" data-reveal>Newsletter</p>
       <h2 data-reveal>Get our newsletter.</h2>
       <p class="lede" data-reveal>Commentary and news you need to know, directly from our team to your inbox.</p>
-      <p class="dim" data-reveal style="margin:1rem 0 0;font-size:0.85rem">Our newsletter is published on Substack. Enter your email and Substack will confirm your subscription.</p>
     </div>
-    <div class="edge edge--quiet newsletter-frame" data-reveal>
-      <iframe src="https://gaysagainstgroomers.substack.com/embed" title="Subscribe to our newsletter on Substack" loading="lazy" width="480" height="320" frameborder="0" scrolling="no"></iframe>
+    <div class="edge edge--quiet panel newsletter-form" data-reveal>
+      <form data-form="newsletter" data-ok="Thank you. You are on our list." data-endpoint="https://formspree.io/f/mljbgkwn" action="https://formspree.io/f/mljbgkwn" method="post">
+        <input type="hidden" name="form" value="newsletter">
+        <input type="hidden" name="_subject" value="Newsletter signup">
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field"><label for="nl-email">Email address <span class="req" aria-hidden="true">*</span><span class="sr"> (required)</span></label>
+        <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+        <button class="btn btn--primary" type="submit">Sign up <span class="arr" aria-hidden="true">→</span></button>
+        <p class="dim" style="margin:1rem 0 0;font-size:0.85rem">We use your email only to send you our newsletter. You can unsubscribe at any time. See our <a class="link" href="/privacy/">Privacy Policy</a>.</p>
+      </form>
+      <p class="form-status" role="status" tabindex="-1" hidden></p>
     </div>
   </div>
 </section>

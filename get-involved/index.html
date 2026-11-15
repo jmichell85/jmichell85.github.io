@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&display=block">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=d68c848f">
+<link rel="stylesheet" href="/assets/css/styles.css?v=6aa20ee0">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Gays Against Groomers","url":"https://www.gaysagainstgroomers.com","foundingDate":"2022","logo":"https://www.gaysagainstgroomers.com/assets/img/logo-mark.png","sameAs":["https://x.com/againstgrmrs","https://www.instagram.com/gaysagainstgroomers","https://www.facebook.com/gaysagainstgroomers","https://www.youtube.com/gaysagainstgroomers","https://t.me/gaysagainstgroomers","https://gaysagainstgroomers.substack.com/"]}</script>
-<script src="/assets/js/app.js?v=772fe61e" defer></script>
+<script src="/assets/js/app.js?v=a9a8e875" defer></script>
 
 </head>
 <body>
@@ -140,10 +140,18 @@
       <p class="eyebrow" data-reveal>Newsletter</p>
       <h2 data-reveal>Get our newsletter.</h2>
       <p class="lede" data-reveal>Commentary and news you need to know, directly from our team to your inbox.</p>
-      <p class="dim" data-reveal style="margin:1rem 0 0;font-size:0.85rem">Our newsletter is published on Substack. Enter your email and Substack will confirm your subscription.</p>
     </div>
-    <div class="edge edge--quiet newsletter-frame" data-reveal>
-      <iframe src="https://gaysagainstgroomers.substack.com/embed" title="Subscribe to our newsletter on Substack" loading="lazy" width="480" height="320" frameborder="0" scrolling="no"></iframe>
+    <div class="edge edge--quiet panel newsletter-form" data-reveal>
+      <form data-form="newsletter" data-ok="Thank you. You are on our list." data-endpoint="https://formspree.io/f/mljbgkwn" action="https://formspree.io/f/mljbgkwn" method="post">
+        <input type="hidden" name="form" value="newsletter">
+        <input type="hidden" name="_subject" value="Newsletter signup">
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field"><label for="nl-email">Email address <span class="req" aria-hidden="true">*</span><span class="sr"> (required)</span></label>
+        <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+        <button class="btn btn--primary" type="submit">Sign up <span class="arr" aria-hidden="true">→</span></button>
+        <p class="dim" style="margin:1rem 0 0;font-size:0.85rem">We use your email only to send you our newsletter. You can unsubscribe at any time. See our <a class="link" href="/privacy/">Privacy Policy</a>.</p>
+      </form>
+      <p class="form-status" role="status" tabindex="-1" hidden></p>
     </div>
   </div>
 </section>
