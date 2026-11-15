@@ -215,6 +215,28 @@
     });
   });
 
+  /* Support popup: shown once, a few seconds in, then not again for a week ---- */
+  const pop = $('[data-support-pop]');
+  if (pop && typeof pop.showModal === 'function') {
+    const KEY = 'gag-support-pop';
+    const WEEK = 7 * 864e5;
+    let last = 0;
+    try { last = Number(localStorage.getItem(KEY)) || 0; } catch (e) {}
+    const remember = () => { try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} };
+    if (Date.now() - last > WEEK) {
+      setTimeout(() => {
+        if (document.hidden || document.querySelector('dialog[open]')) return;
+        const img = $('img[data-src]', pop);
+        if (img) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
+        pop.showModal();
+        remember();
+      }, 8000);
+    }
+    $$('[data-pop-close]', pop).forEach((b) => b.addEventListener('click', () => pop.close()));
+    pop.addEventListener('click', (e) => { if (e.target === pop) pop.close(); });   // click on the backdrop
+    $$('a', pop).forEach((a) => a.addEventListener('click', remember));
+  }
+
   /* Share: copy link -------------------------------------------------------- */
   $$('[data-copy]').forEach((btn) => btn.addEventListener('click', async () => {
     const original = btn.textContent;

@@ -291,6 +291,24 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .list-rule li span:first-child { font-size: 0.78rem; letter-spacing: 0.14em; color: var(--dim); padding-top: 0.35rem; }
 
 /* Footer */
+.newsletter-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.newsletter h2 { margin-bottom: 0.4em; }
+.newsletter-frame { padding: 0.5rem; background: #121212; }
+.newsletter-frame iframe { display: block; width: 100%; height: 320px; border: 0; border-radius: 14px; background: transparent; color-scheme: dark; }
+@media (max-width: 900px) { .newsletter-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.support-pop { width: min(92vw, 620px); max-height: 92dvh; padding: 0; border: 1px solid var(--line-strong); border-radius: 22px; background: var(--surface); color: var(--text); overflow: auto; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), 0 0 60px rgba(47, 208, 234, 0.12); }
+.support-pop::backdrop { background: rgba(4, 5, 8, 0.78); backdrop-filter: blur(4px); }
+.support-pop[open] { animation: pop-in 0.45s var(--ease); }
+@keyframes pop-in { from { opacity: 0; transform: translateY(18px) scale(0.98); } }
+.support-pop img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 672; object-fit: cover; background: #0c0d12; }
+.support-pop-body { padding: clamp(1.3rem, 3vw, 2rem); text-align: center; }
+.support-pop-body h2 { font-size: var(--step-2); margin: 0 0 1.2rem; text-wrap: balance; }
+.support-pop-body .btn-row { justify-content: center; margin: 0; }
+.support-pop-close { position: absolute; top: 0.7rem; right: 0.7rem; z-index: 1; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(8, 9, 13, 0.7); color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.support-pop-close:hover { background: rgba(8, 9, 13, 0.95); }
+@media (prefers-reduced-motion: reduce) { .support-pop[open] { animation: none; } }
+
 .site-footer { position: relative; padding: clamp(3.5rem, 7vw, 6rem) 0 2rem; background: #06070a; overflow: hidden; }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 4fr) repeat(3, minmax(0, 2fr)); gap: 2.5rem; margin-bottom: 3.5rem; }
 .footer-grid h2 { font: 600 0.75rem/1 var(--font-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); margin-bottom: 1.2rem; font-stretch: 100%; }
