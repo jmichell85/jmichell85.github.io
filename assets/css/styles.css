@@ -291,6 +291,15 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .list-rule li span:first-child { font-size: 0.78rem; letter-spacing: 0.14em; color: var(--dim); padding-top: 0.35rem; }
 
 /* Footer */
+.slaps { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; scroll-margin-top: 110px; }
+.slaps h2 { font-size: var(--step-2); margin: 0.8rem 0 0.5em; }
+.slaps .btn-row { margin-top: 1.4rem; }
+.slaps-art { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 1rem; align-items: center; }
+.slaps-art img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55); }
+.slaps-tall { transform: rotate(-3deg); }
+.slaps-wide { transform: rotate(2deg); }
+@media (max-width: 900px) { .slaps { grid-template-columns: minmax(0, 1fr); } .slaps-art { max-width: 440px; } }
+
 .newsletter-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .newsletter h2 { margin-bottom: 0.4em; }
 .newsletter-form .field { margin-bottom: 1.1rem; }
