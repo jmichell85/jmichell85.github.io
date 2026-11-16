@@ -300,6 +300,17 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .slaps-wide { transform: rotate(2deg); }
 @media (max-width: 900px) { .slaps { grid-template-columns: minmax(0, 1fr); } .slaps-art { max-width: 440px; } }
 
+.package h3 { font-size: var(--step-1); }
+.package-list { list-style: none; margin: 1rem 0 1.4rem; padding: 0; display: grid; gap: 0.6rem; font-size: 0.92rem; color: var(--text); }
+.package-list li { position: relative; padding-left: 1.2rem; line-height: 1.4; }
+.package-list li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--s-cyan); box-shadow: 0 0 8px var(--s-cyan); }
+.kit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; }
+.kit h2 { font-size: var(--step-2); margin-bottom: 0.4em; }
+.kit p { color: var(--silver); max-width: 52ch; margin: 0; }
+.kit .btn-row { margin: 0; }
+@media (max-width: 1080px) { .packages { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .packages { grid-template-columns: minmax(0, 1fr); } }
+
 .newsletter-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .newsletter h2 { margin-bottom: 0.4em; }
 .newsletter-form .field { margin-bottom: 1.1rem; }
