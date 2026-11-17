@@ -311,6 +311,11 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 @media (max-width: 1080px) { .packages { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .packages { grid-template-columns: minmax(0, 1fr); } }
 
+.mission-note { margin-top: clamp(2.5rem, 5vw, 4rem); max-width: 62ch; }
+.mission-note p { font-size: var(--step-1); line-height: 1.5; color: var(--silver); margin: 0 0 1em; }
+.mission-note p:last-child { margin-bottom: 0; }
+.mission-note .mission-note-lead { font: 700 var(--step-2)/1.2 var(--font-display); font-stretch: 86%; letter-spacing: -0.01em; color: var(--text); text-wrap: balance; }
+
 .newsletter-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .newsletter h2 { margin-bottom: 0.4em; }
 .newsletter-form .field { margin-bottom: 1.1rem; }
