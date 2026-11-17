@@ -376,6 +376,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .once h2 { margin-bottom: 0.3em; font-size: var(--step-2); }
 .once .lede { font-size: 1rem; }
 .once .amounts { margin-top: 1.6rem; gap: 0.7rem; }
+.once-body { margin-top: 1.6rem; max-width: 46rem; }
 .btn--amount { --pad: 0.8rem 1.3rem; font: 700 1.05rem/1 var(--font-display); font-stretch: 88%; min-width: 84px; }
 .once-jump { margin: 2rem 0 0; color: var(--silver); }
 .amounts { display: flex; flex-wrap: wrap; gap: 0.6rem; }

@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&display=block">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=7c4c970b">
+<link rel="stylesheet" href="/assets/css/styles.css?v=8dd8a96f">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Gays Against Groomers","url":"https://www.gaysagainstgroomers.com","foundingDate":"2022","logo":"https://www.gaysagainstgroomers.com/assets/img/logo-mark.png","sameAs":["https://x.com/againstgrmrs","https://www.instagram.com/gaysagainstgroomers","https://www.facebook.com/gaysagainstgroomers","https://www.youtube.com/gaysagainstgroomers","https://t.me/gaysagainstgroomers","https://gaysagainstgroomers.substack.com/"]}</script>
 <script src="/assets/js/app.js?v=a9a8e875" defer></script>
 
@@ -68,8 +68,12 @@
 <section class="section">
   <div class="ambient ambient--a" style="left:-10%;top:0" data-parallax="50" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="section-head"><div><p class="eyebrow" data-reveal>Monthly support</p><h2 data-reveal>Stand with us every month.</h2></div><p class="muted measure" data-reveal style="max-width:36ch;margin:0">A monthly contribution is the most effective way to support the work. Choose the level that suits you.</p></div>
-    <div class="grid g-4 tiers">
+    <div class="once" data-reveal style="padding-bottom:0">
+      <p class="eyebrow">Monthly support</p>
+      <h2>Stand with us every month.</h2>
+      <p class="lede">A monthly contribution is the most effective way to support the work. Choose the level that suits you.</p>
+    </div>
+    <div class="grid g-4 tiers" style="margin-top:1.6rem">
       <div class="edge card tier" data-reveal style="--i:0">
         <span class="tag">Supporter</span>
         <p class="amount">$10<span>/month</span></p>
@@ -109,21 +113,26 @@
     </div>
   </div>
 </section>
-<section class="section section--raised">
-  <div class="wrap split">
-    <div><p class="eyebrow">Bitcoin</p><h2 style="font-size:var(--step-2)">Contribute with Bitcoin</h2></div>
-    <div>
-      <div class="edge card"><span class="tag" style="--tag:var(--s-orange)">BTC address</span><p class="code" style="font-size:1rem;color:var(--text)">345rSqvmZf5XP54CrSXRsUQMbicHLNcoDK</p><div class="card-foot"><span>Send Bitcoin only to this address.</span><button class="btn btn--ghost btn--sm" type="button" data-copy="345rSqvmZf5XP54CrSXRsUQMbicHLNcoDK">Copy address</button></div></div>
-      <p class="notice" style="margin-top:2rem">We are an independent advocacy movement, not a charity or tax-exempt organization. Contributions are not tax-deductible.</p>
+<section class="section section--tight section--raised" id="bitcoin">
+  <div class="wrap">
+    <div class="once" data-reveal>
+      <p class="eyebrow">Bitcoin</p>
+      <h2>Contribute with Bitcoin.</h2>
+      <p class="lede">Send Bitcoin to our address below.</p>
+      <div class="once-body">
+        <div class="edge card"><span class="tag" style="--tag:var(--s-orange)">BTC address</span><p class="code" style="font-size:1rem;color:var(--text)">345rSqvmZf5XP54CrSXRsUQMbicHLNcoDK</p><div class="card-foot"><span>Send Bitcoin only to this address.</span><button class="btn btn--ghost btn--sm" type="button" data-copy="345rSqvmZf5XP54CrSXRsUQMbicHLNcoDK">Copy address</button></div></div>
+        <p class="notice" style="margin-top:1.2rem">We are an independent advocacy movement, not a charity or tax-exempt organization. Contributions are not tax-deductible.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="section" id="partner">
-  <div class="wrap split">
-    <div><p class="eyebrow" data-reveal>Advertise &amp; Partner</p><h2 data-reveal style="font-size:var(--step-2)">Partner with us</h2></div>
-    <div>
-      <p class="lede" data-reveal>Reach our audience of more than 1.1 million followers and subscribers by sponsoring our social channels, our website or our newsletter.</p>
-      <div class="btn-row" data-reveal><a class="btn btn--primary" href="/advertise/">Reach our audience <span class="arr" aria-hidden="true">→</span></a></div>
+<section class="section section--tight" id="partner">
+  <div class="wrap">
+    <div class="once" data-reveal>
+      <p class="eyebrow">Advertise &amp; Partner</p>
+      <h2>Partner with us.</h2>
+      <p class="lede">Reach our audience of more than 1.1 million followers and subscribers by sponsoring our social channels, our website or our newsletter.</p>
+      <div class="once-body"><a class="btn btn--primary" href="/advertise/">Reach our audience <span class="arr" aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>
