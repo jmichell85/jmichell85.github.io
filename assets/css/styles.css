@@ -484,7 +484,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 .js [data-reveal="img"] { opacity: 1; transform: none; }
 .js [data-reveal="img"] img { clip-path: inset(0 0 100% 0); transition: clip-path 0.7s var(--ease), transform 0.7s var(--ease), opacity 0.5s; }
 .js [data-reveal="img"].is-in img { clip-path: inset(0); }
-.split-words .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.split-words .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 0.06em 0.08em; margin: 0 -0.06em -0.08em; }
 .js .split-words .w > span { display: inline-block; transform: translateY(105%); transition: transform 1s var(--ease); transition-delay: calc(var(--w) * 70ms + 120ms); }
 .js .split-words.is-in .w > span { transform: none; }
 
