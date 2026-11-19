@@ -549,3 +549,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 }
 @media (forced-colors: active) { .edge::before, .btn--primary::before { background: CanvasText; opacity: 1; } }
 @media print { .site-header, .site-footer, .hero-stage, .ambient, .cursor-light { display: none; } body { background: #fff; color: #000; } }
+
+/* Attention wiggle: a short shake every few seconds */
+@keyframes btn-wiggle { 0%, 82%, 100% { transform: rotate(0); } 85% { transform: rotate(-4deg); } 88% { transform: rotate(4deg); } 91% { transform: rotate(-3deg); } 94% { transform: rotate(3deg); } 97% { transform: rotate(-1deg); } }
+.btn--wiggle { animation: btn-wiggle 3.2s ease-in-out infinite; transform-origin: 50% 60%; }
+.btn--wiggle:hover, .btn--wiggle:focus-visible { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .btn--wiggle { animation: none; } }
