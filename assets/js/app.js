@@ -189,6 +189,22 @@
     apply();
   });
 
+  /* Activity counts (GoatCounter events; does nothing until the service is connected) */
+  const track = (name) => {
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: name, event: true }); } catch (e) {}
+  };
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('a, button');
+    if (!el) return;
+    const label = (el.textContent || '').replace(/[→↗]/g, '').replace(/\s+/g, ' ').trim().slice(0, 60);
+    if (el.matches('.btn') && label) {
+      const where = el.closest('.site-header') ? 'header' : el.closest('footer') ? 'footer' : el.closest('dialog') ? 'popup' : location.pathname;
+      track(`Button: ${label} (${where})`);
+    } else if (el.tagName === 'A' && el.hostname && el.hostname !== location.hostname) {
+      track(`Outbound: ${el.hostname.replace(/^www\./, '')}`);
+    }
+  }, { capture: true });
+
   /* Forms ------------------------------------------------------------------ */
   $$('form[data-form]').forEach((form) => {
     const status = $('.form-status', form.parentElement);
@@ -208,6 +224,7 @@
         const res = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
+        track(`Form sent: ${form.dataset.form}`);
         say('ok', form.dataset.ok || 'Thank you. Your message was sent.');
       } catch (err) {
         say('error', 'Something went wrong and your message was not sent. Please try again.');
